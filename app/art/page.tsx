@@ -87,8 +87,8 @@ const Art = () => {
                                         <div key={slideIndex} onClick={ () => handleOpenSlideBox(slideIndex)} className='grid p-2 rounded-sm  text-sm hover:scale-105 ease-in duration-100 '>
                                         <div className='grid grid-cols-1 p-2 gap-1 shadow-md rounded-sm bg-[#1a363d] justify-center items-center'>
                                             <div className='m-auto '>
-                                                <Image 
-                                                    src={`/../public/assets/art/art${slideIndex + 1}.png`}
+                                                <Image className='rounded-sm'
+                                                    src={slides[slideIndex].url}
                                                     width='500'
                                                     height='500'
                                                     alt='/'
@@ -108,7 +108,7 @@ const Art = () => {
          <div className={slideBoxOpen ? 'fixed border-2 border-[#004050] bg-[#1a363d]/90 rounded-lg m-auto top-0 left-0 right-0 bottom-0 max-w-[90%] h-[95%] group' : 'hidden'}>
             <div className='flex flex-col w-full h-full rounded-sm items-center justify-center p-2 m-auto'>
              {/* <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full min-h-full rounded-sm bg-center bg-contain bg-no-repeat p-2 m-auto'> */}
-                <Image className=' rounded-sm shadow-lg shadow-[#1a363d] ' src={`${slides[currentIndex].url}`}
+                <Image className=' rounded-sm ' src={slides[currentIndex].url}
                   width='900'
                   height='900'
                   alt='/'
@@ -130,7 +130,7 @@ const Art = () => {
             <div className='flex gap-2 top-4 justify-center py-2 -translate-y-20'>
                 {slides.map((slide, slideIndex) => (
                     <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='hidden group-hover:block cursor-pointer '>
-                        <RxDot className=' rounded-full  border-slate-400/60 text-slate-400/60'/>
+                        <RxDot className=' rounded-full border-slate-400/60 text-slate-400/60'/>
                     </div>))}
             </div>
         </div>

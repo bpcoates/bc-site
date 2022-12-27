@@ -6,6 +6,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 import Link from 'next/link'
 import Image from 'next/image'
 import {FaCopyright} from 'react-icons/fa'
+import logo from '../public/logo.png'
 
 const Header = () => {
     const [nav, setNav] = useState(false)
@@ -15,7 +16,7 @@ const Header = () => {
     <div className='fixed w-full h-[50px] flex justify-between items-center px-4 bg-[#1a363d] text-slate-400'>
         <div>
             <Link href="/" >
-                <Image src="/../public/logo.png" alt='logo image' height={40} width={40} className='hover:scale-105' />
+                <Image src={logo} alt='logo image' height={40} width={40} className='hover:scale-105' />
             </Link>
             
         </div>

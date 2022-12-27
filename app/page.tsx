@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import logo from '../public/logo.png'
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       <div className=' max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <div className='flex align-baseline gap-2'>
         <div>
-          <Image src="/../public/logo.png" alt='logo image' height={60} width={60} className='hover:scale-105' />
+          <Image src={logo} alt='logo image' height={60} width={60} className='hover:scale-105' />
         </div>
 
         

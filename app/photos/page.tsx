@@ -45,7 +45,7 @@ const Photos = () => {
         },
         {
             url: "/../public/assets/photos/img10.jpg",
-            desc: "seattle"
+            desc: "sunset"
         },
     ];
 
@@ -76,7 +76,7 @@ const Photos = () => {
     }
 
   return (
-    <div id='photos' className='w-full h-full p-6 bg-slate-600 pt-20'>
+    <div className='w-full h-full p-6 bg-slate-600 pt-20'>
         <div className=' mx-auto flex flex-col justify-center h-full px-8'>
             <p className='py-2 text-xl tracking-widest text-slate-400 border-b-2 border-[#1a363d] '>photos</p>
             <div className='flex h-full p-10 sm:mt-auto justify-center'>
@@ -88,7 +88,7 @@ const Photos = () => {
                                         <div className='grid grid-cols-1 p-2 gap-1 shadow-md rounded-sm bg-[#1a363d] justify-center items-center'>
                                             <div className='m-auto '>
                                                 <Image className='rounded-sm'
-                                                    src={`/../public/assets/photos/img${slideIndex + 1}.jpg`}
+                                                    src={slides[slideIndex].url}
                                                     width='500'
                                                     height='500'
                                                     alt='/'
@@ -108,7 +108,7 @@ const Photos = () => {
          <div className={slideBoxOpen ? 'fixed border-2 border-[#004050] bg-[#1a363d]/90 rounded-lg m-auto top-0 left-0 right-0 bottom-0 max-w-[90%] h-[95%] group' : 'hidden'}>
             <div className='flex flex-col w-full h-full rounded-sm items-center justify-center p-2 m-auto'>
              {/* <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full min-h-full rounded-sm bg-center bg-contain bg-no-repeat p-2 m-auto'> */}
-                <Image className=' rounded-sm shadow-lg shadow-[#1a363d] ' src={`${slides[currentIndex].url}`}
+                <Image className=' rounded-sm' src={slides[currentIndex].url}
                   width='900'
                   height='900'
                   alt='/'
