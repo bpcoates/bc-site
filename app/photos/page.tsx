@@ -76,22 +76,21 @@ const Photos = () => {
     }
 
   return (
-    <div className='w-full h-full p-6 bg-slate-600 pt-20'>
+    <div className='flex w-full justify-center p-6 bg-slate-600 pt-20'>
         <div className=' mx-auto flex flex-col justify-center h-full px-8'>
             <p className='py-2 text-xl tracking-widest text-slate-400 border-b-2 border-[#1a363d] '>photos</p>
             <div className='flex h-full p-10 sm:mt-auto justify-center'>
-                {/* <div className='grid sm:grid-cols-1 md:grid-cols-4 lg:grid-col-4 gap-1 text-slate-200 '> */}
-                <div className='flex flex-wrap gap-1 text-slate-200 '>
-                    {/*  */}
+                {/* <div className='grid sm:grid-cols-1 md:grid-cols-4 lg:grid-col-4 gap-1 text-slate-200 '>  */}
+                <div className='flex flex-row flex-wrap justify-center gap-1 text-slate-200 '>
                     {slides.map((slide, slideIndex) => (
-                                        <div key={slideIndex} onClick={ () => handleOpenSlideBox(slideIndex)} className='grid p-2 rounded-sm  text-sm hover:scale-105 ease-in duration-100 '>
+                                  <div key={slideIndex} onClick={ () => handleOpenSlideBox(slideIndex)} className='grid p-2 rounded-sm text-sm hover:scale-105 ease-in duration-100 '>
                                         <div className='grid grid-cols-1 p-2 gap-1 shadow-md rounded-sm bg-[#1a363d] justify-center items-center'>
                                             <div className='m-auto '>
-                                                <Image className='rounded-sm'
+                                                <Image className='rounded-sm w-auto h-auto'
                                                     src={slides[slideIndex].url}
-                                                    width='500'
-                                                    height='500'
-                                                    alt='/'
+                                                    width='200'
+                                                    height='200'
+                                                    alt={slides[currentIndex].desc}
                                                 />
                                             </div>
                                             <div className='flex flex-col items-center justify-center p-1'>
@@ -108,10 +107,11 @@ const Photos = () => {
          <div className={slideBoxOpen ? 'fixed border-2 border-[#004050] bg-[#1a363d]/90 rounded-lg m-auto top-0 left-0 right-0 bottom-0 max-w-[90%] h-[95%] group' : 'hidden'}>
             <div className='flex flex-col w-full h-full rounded-sm items-center justify-center p-2 m-auto'>
              {/* <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full min-h-full rounded-sm bg-center bg-contain bg-no-repeat p-2 m-auto'> */}
-                <Image className=' rounded-sm' src={slides[currentIndex].url}
-                  width='900'
-                  height='900'
-                  alt='/'
+                <Image className='rounded-sm w-auto h-auto'
+					src={slides[currentIndex].url}
+					width='800'
+					height='800'
+					alt={slides[currentIndex].desc}
               /> 
 
             </div>
