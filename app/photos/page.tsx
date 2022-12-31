@@ -8,43 +8,43 @@ const Photos = () => {
 
     const slides = [
         {
-            url: "/../public/assets/photos/img1.jpg",
+            url: "/../public/photos/img1.jpg",
             desc: "snow walk"
         },
         {
-            url: "/../public/assets/photos/img2.jpg",
+            url: "/../public/photos/img2.jpg",
             desc: "sunflower"
         },
         {
-            url: "/../public/assets/photos/img3.jpg",
+            url: "/../public/photos/img3.jpg",
             desc: "snow explosions"
         },
         {
-            url: "/../public/assets/photos/img4.jpg",
+            url: "/../public/photos/img4.jpg",
             desc: "winter path"
         },
         {
-            url: "/../public/assets/photos/img5.jpg",
+            url: "/../public/photos/img5.jpg",
             desc: "grass"
         },
         {
-            url: "/../public/assets/photos/img6.jpg",
+            url: "/../public/photos/img6.jpg",
             desc: "wet boy"
         },
         {
-            url: "/../public/assets/photos/img7.jpg",
+            url: "/../public/photos/img7.jpg",
             desc: "glimmer"
         },
         {
-            url: "/../public/assets/photos/img8.jpg",
+            url: "/../public/photos/img8.jpg",
             desc: "bellevue"
         },
         {
-            url: "/../public/assets/photos/img9.jpg",
+            url: "/../public/photos/img9.jpg",
             desc: "rainier"
         },
         {
-            url: "/../public/assets/photos/img10.jpg",
+            url: "/../public/photos/img10.jpg",
             desc: "sunset"
         },
     ];
@@ -90,7 +90,7 @@ const Photos = () => {
                                                     src={slides[slideIndex].url}
                                                     width='200'
                                                     height='200'
-                                                    alt={slides[currentIndex].desc}
+                                                    alt={slides[slideIndex].desc}
                                                 />
                                             </div>
                                             <div className='flex flex-col items-center justify-center p-1'>
@@ -104,16 +104,21 @@ const Photos = () => {
 
         <div  onClick={() => handleOpenSlideBox(0)} className={slideBoxOpen ? 'fixed border-[#1a363d] bg-black rounded-lg m-auto top-0 left-0 right-0 bottom-0 w-full h-full' : 'hidden fixed border-[#004050] bg-[#1a363d]/50 rounded-lg m-auto top-0 left-0 right-0 bottom-0 w-full h-full'}>
         </div>
-         <div className={slideBoxOpen ? 'fixed border-2 border-[#004050] bg-[#1a363d]/90 rounded-lg m-auto top-0 left-0 right-0 bottom-0 max-w-[90%] h-[95%] group' : 'hidden'}>
+         <div className={slideBoxOpen ? 'fixed border-2 border-[#004050] bg-[#1a363d]/90 rounded-lg m-auto top-0 left-0 right-0 bottom-0 max-w-[80%] h-[95%] group' : 'hidden'}>
             <div className='flex flex-col w-full h-full rounded-sm items-center justify-center p-2 m-auto'>
              {/* <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full min-h-full rounded-sm bg-center bg-contain bg-no-repeat p-2 m-auto'> */}
-                <Image className='rounded-sm w-auto h-auto'
+                <div className=' flex m-auto w-full justify-center rounded-sm p-5'>
+                    <div className='h-full m-auto p-10 '>
+                <Image 
+                    className='object-cover rounded-sm p-2'
 					src={slides[currentIndex].url}
-					width='800'
-					height='800'
+                    fill
+					// width='400'
+					// height='400'
 					alt={slides[currentIndex].desc}
-              /> 
-
+                /> 
+                </div>
+                </div>
             </div>
             <div onClick={prevSlide} className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-[2%] text-2xl rounded-full p-2 bg-slate-900/40 border-2 border-slate-400/60 text-slate-400/60 cursor-pointer'>
                 <FaChevronLeft size={10} />
