@@ -18,10 +18,10 @@ const Home = () => {
           </div>
 
           <div>
-            {/* <p className='text-[#1a363d] sm:font-bold tracking-widest'>welcome to</p> */}
-            {/* <h1 className="text-2xl text-slate-200 sm:text-3xl tracking-widest">
+            <p className="text-slate-600 sm:font-bold tracking-widest">_</p>
+            <h1 className="text-2xl text-slate-200 sm:text-3xl tracking-widest">
               brent coates
-            </h1> */}
+            </h1>
           </div>
         </div>
       </div>
